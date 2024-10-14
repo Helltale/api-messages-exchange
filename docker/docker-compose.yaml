@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  db:
+    image: mongo:latest
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - db_data_api:/data/db  # Хранение данных MongoDB
+
+volumes:
+  db_data_api:
